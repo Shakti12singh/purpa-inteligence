@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meditation site</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      --lightGrey: #fcfcfc;
+      --pink: #b52b65;
+      --darkPurple: #4f3961;
+      --darkGrey: #585858;
+      --darkerGrey: #6d6d6d;
+      --yellow: #ffe75e;
+      --white: #fff;
+      /* --familyRoboto: "Roboto", sans-serif;
+--familyRobotoSlab: "Roboto Slab", sans-serif; */
+      --bold: bold;
+      /* overflow: hidden; */
+    
+    }
+
+
+
+    body {
+      margin: 0;
+      background-color: #fcfcfc;
+      font-family: 'Poppins', serif;
+      /* font-family: var(--familyRoboto); */
+
+      padding: 0;
+      /* padding-top: 80px; */
+      /* min-height: 100vh; */
+      overflow-x: hidden;
+
+    }
+
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    a {
+      text-decoration: none;
+      outline-color: var(--yellow);
+    }
+
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 20px;
+      z-index: 999;
+      transition: 0.6s;
+    }
+
+    header.sticky {
+      background-color: #efecec;
+      padding: 15px 20px;
+
+    }
+
+    header .brand {
+      font-size: 24px;
+      color: #ff0077;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 2px;
+    }
+
+    header .menu {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header .menu a {
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #070707;
+      margin: 0 30px;
+      padding: 5px 15px;
+      text-transform: uppercase;
+      border-radius: 15px;
+      transition: 0.3s;
+      transition-property: color, background;
+    }
+
+    header .menu a:hover {
+      color: #000;
+      background: #e94ec7;
+    }
+
+    header .btn {
+      font-size: 25px;
+      cursor: pointer;
+      color: #1d1717;
+      display: none;
+    }
+
+    @media (max-width: 1024px) {
+      header .btn {
+        display: block;
+      }
+
+      header .menu.active {
+        right: 0;
+      }
+
+      body {
+        overflow-x: hidden;
+      }
+
+      header .menu {
+        position: fixed;
+        background: #f389d8;
+        flex-direction: column;
+        min-width: 100px;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        padding: 80px 50px;
+        transition-property: right;
+        transition: 0.5s;
+      }
+
+      header .menu .close-btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 25px;
+      }
+
+      header .menu a {
+        display: block;
+        font-size: 12px;
+        margin: 20px;
+        padding: 0 15px;
+      }
+
+      header .menu a :hover {
+        background-color: white;
+      }
+
+      .btn i {
+        position: absolute;
+        right: 50px;
+        top: 22px;
+        color: #000;
+      }
+    }
+
+
+ 
+
+/* 2rd page  */
+
+
+
+.container{
+  
+  display: flex;
+  justify-content: center;
+  
+  
+  margin-top: 40px;
+  padding: 0px 20px;
+ 
+
+}
+
+.content-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  background-color: #f3e5f5;
+
+
+}
+
+.content-section .card{
+  flex: 1 1 1 1;
+  margin: 17px 20px;
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.2);
+  width: 250px;
+  border-radius: 10px;
+  background-color: white;
+
+
+
+
+}
+
+.content-section .card img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+
+}
+
+.content-section .card h2{
+  margin: 15px 0px;
+  font-size: 23px;
+  color: #1662a1;
+  font-family: 'Poppins', sans-serif;
+  line-height: 21px;
+
+
+}
+
+.content-section .card p{
+font-size: 12px;
+line-height: 1.5;
+padding: 0 10px;
+margin-bottom: 20px;
+font-family: 'Montserrat', sans-serif;
+font-weight: 400;
+
+}
+
+@media screen and (max-width: 768px) {
+  .content-section{
+      flex-direction: column;
+      gap: 10px;
+  }
+}
+
+.y1{
+  text-align: center;
+  font-size: 28px;
+  margin-top: 40px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+
+
+
+/* 3th page css */
+
+
+.wrapper{
+    padding: 10px 10%;
+}
+#card-area{
+    padding: 30px 0;
+}
+.box-area{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 40px;
+    margin-top: 15px;
+}
+.box {
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.9);
+}
+.box img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.overlay {
+	width: 100%;
+	height: 0;
+    color: #fff;
+	background: linear-gradient(transparent,#1c1c1c 58%);
+	border-radius: 10px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	
+	text-align: center;
+	font-size: 14px;
+	transition: height 0.5s;
+}
+.overlay h3 {
+	font-weight: 500;
+	margin-bottom: 5px;
+	margin-top: 40%;
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 12px;
+	letter-spacing: 2px;
+  line-height: 15px;
+}
+.overlay a {
+	margin-top: 10px;
+	color: #262626;
+	text-decoration: none;
+	font-size: 14px;
+	background: #fff;
+	border-radius: 50px;
+	text-align: center;
+	padding: 5px 15px;
+}
+.box:hover img{
+    transform: scale(1.1);
+}
+.box:hover .overlay{
+    height: 100%;
+}
+
+.y3{
+    text-align: center;
+    font-size: 28px;
+    margin-top: 60px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* 4th page css */
+
+.container2{
+    
+    display: flex;
+    justify-content: center;
+    
+    background-color: #f7f7f7;
+    margin-top: 40px;
+    padding: 0px 20px;
+   
+
+}
+
+.content-section2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+.content-section2 .card1{
+    flex: 1 1 1 1;
+    margin: 17px 20px;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.2);
+    width: 250px;
+    border-radius: 10px;
+
+}
+
+.content-section2 .card1 img{
+    width: 100%;
+    height: auto;
+    clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    
+    
+
+}
+
+.content-section2 .card1 h2{
+    margin: 15px 10px;
+    font-size: 16px;
+    color: #1662a1;
+    font-family: 'Poppins', sans-serif;
+    line-height: 21px;
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .content-section2{
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.y2{
+    text-align: center;
+    font-size: 28px;
+    margin-top: 50px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+
+/* footer */
+
+
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    background-color: #2d2e33;
+    padding: 50px 3%;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer-col{
+    width: 10%;
+    padding-left: 10px;
+    margin-left: 15px;
+}
+
+.footer-col h4{
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #f1bc0d;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background-color: #27c0ac;
+    height: 2px;
+    width: 40px;
+}
+
+ul li:not(:last-child){
+    margin-bottom: 8px;
+}
+
+ul li a:hover{
+    color: white;
+    padding-left: 2px;
+}
+
+ul li a{
+    display: block;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+
+    color: #bdb6b6;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+
+
+@media(max-width: 740px){
+    .footer-col{
+        width: 20%;
+        margin-bottom: 30px;
+        text-align: left;
+        padding: 0 10px;
+    }
+
+    .footer-col h4::before{
+        all: unset;
+    }
+}
+
+@media(max-width: 575px){
+    .footer-col{
+        width: 40%;
+    }
+}
+
+.main{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 120px;
+    margin-top: 70px;
+
+}
+
+.yogaimg{
+width: 70%;
+}
+
+.yogaimg img{
+    width: 100%;
+
+}
+
+.text{
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    
+}
+
+.text h1{
+    font-size: 25px;
+    width: 100%;
+    margin-bottom: 30px;
+   
+}
+
+.text p{
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.text h2{
+    margin-bottom: 30px;
+}
+
+.text button{
+    padding: 15px;
+    border: none;
+    background-color: #ff0077;
+    color: white;
+    border-radius: 40px;
+}
+
+
+@media only screen and (max-width: 900px) {
+
+.text h1{
+    font-size: 20px;
+    width: 100%;
+}
+
+.text p{
+    font-size: 16px;
+}
+
+.text h2{
+    font-size: 18px;
+}
+
+}
+
+@media only screen and (max-width: 680px){
+    .main{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+       
+    }
+}
+
+@media only screen and (max-width: 560px){
+  .main{
+   margin-left: -20px;
+  }
+}
+
+@media only screen and (max-width: 460px){
+
+    .text h1{
+    font-size: 18px;
+    width: 100%;
+}
+
+.text p{
+    font-size: 15px;
+}
+
+.text h2{
+    font-size: 16px;
+}
+}
+
+
+
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <a href="" class="brand">PURPA INTELIGENCE </a>
+    <div class="menu">
+      <div class="btn">
+        <i class="fas fa-times close-btn"></i>
+      </div>
+      <a href="#home">Home</a>
+      <a href="#aboutus">Offering</a>
+      <a href="#joinus">Watch</a>
+      <a href="#contactus">Community</a>
+      <a href="#joinus">Offering Corporates</a>
+      <a href="#contactus">Cart</a>
+      <!-- <a href="#">Contact</a> -->
+    </div>
+    <div class="btn">
+      <i class="fas fa-bars menu-btn"></i>
+    </div>
+  </header>
+
+  
+
+
+  <!-- main page -->
+
+  <div class="main">
+    <div class="yogaimg">
+        <img src="yoga.png" alt="">
+    </div>
+
+    <div class="text">
+<h1>AI DRIVEN PLATFORM FOR YOUR ALTERNATIVE HEALING AND SPRITUAL GROWTH.</h1>
+<p>
+    <b>P</b>rioritise your well-being journey. <br>
+    <b>U</b>nlock your potential by talking to expert. <br>
+    <b>R</b>evel in the enriching resources of music-videos. <br>
+    <b>P</b>urse purpose in life through deep community engagement. <br>
+    <b>U</b>plift your life by embracing your inner happiness. <br>
+    <b>L</b>earn alternative healings and nurture your spritual growth.
+
+  </p>
+
+  
+  <h2 style="color: #ff0077;">EVIDENCE BASED RESEARCH VALIDATES US...</h2>
+
+
+  <button>GET STARTED</button>
+    </div>
+</div>
+
+
+ <!-- 2nd page -->
+
+
+
+ <h1 class="y1">WELL-BEING SOLUTIONS</h1>
+    
+ <div class="container">
+     <div class="content-section">
+         <div class="card">
+            
+          <img src="https://articles-1mg.gumlet.io/articles/wp-content/uploads/2017/10/rsz_shutterstock_105209216.jpg?compress=true&quality=80&w=640&dpr=2.6" alt="" >
+         <h2>
+             Meditation
+         </h2>
+        <p>Focused mental practice promoting relaxation, awareness, and stress reduction benefits.</p>     
+   
+         </div>
+ 
+         <div class="card">
+            
+             <img src="https://static.sadhguru.org/d/46272/1651909082-image-6.jpg" alt="">
+            <h2>
+               Yoga
+            </h2>
+           <p>"Physical, mental, and spiritual practice for holistic well-being <br>and balance."</p>     
+      
+            </div>
+ 
+            <div class="card">
+            
+             <img src="https://cdn.pixabay.com/photo/2017/08/02/11/44/sun-2571158_640.jpg" alt="" >
+            <h2>
+              Naturapathy
+            </h2>
+           <p>Natural healing using non-invasive methods and lifestyle <br>adjustments.</p>     
+      
+            </div>
+ 
+            <div class="card">
+            
+             <img src="https://www.hindustantimes.com/ht-img/img/2023/08/15/1600x900/luemen-rutkowski-mIHbipd5-Qw-unsplash_1692086093056_1692086121146.jpg" alt="" >
+            <h2>
+                Pranic Healing
+            </h2>
+           <p>Energetic healing using prana to balance and revitalize <br>the body.</p>     
+      
+            </div>
+ 
+            <div class="card">
+            
+             <img src="https://www.womentriangle.com/wp-content/uploads/2020/11/yoga.jpg" alt="" >
+            <h2>
+              Access Bar
+            </h2>
+           <p>Yoga technique focusing on energy points for relaxation and clarity.</p>     
+      
+            </div>
+ 
+            
+            <div class="card">
+            
+             <img src="https://www.shape.com/thmb/6T097E2WwIA2v-L8mTrCw5QsoUM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/071223-Yin-Yoga-Social-c7740e9443ed41aaa5197ea0ebbfbfed.jpg" alt="" >
+            <h2>
+                Heal with Crystals
+            </h2>
+           <p>Using crystals to balance energy and promote well-being in yoga.</p>     
+      
+            </div>
+ 
+                 
+            <div class="card">
+            
+             <img src="https://www.yogaiya.in/wp-content/uploads/2018/08/Sound-Healing-and-Yoga.jpg" alt="" >
+            <h2>
+                Sound Therapy
+            </h2>
+           <p>Healing through vibrations, music, or chanting for yogic balance.</p>     
+      
+            </div>
+ 
+                 
+            <div class="card">
+            
+             <img src="https://media.licdn.com/dms/image/C4E12AQFP8l2FrudcJA/article-cover_image-shrink_720_1280/0/1568819349062?e=2147483647&v=beta&t=uqHz7GI8R3kYwAx7V57pA1BC8D6gk7wNNDcAw0zq72c" alt="" >
+            <h2>
+               Reiki Healing
+            </h2>
+           <p>Spiritual energy healing in yoga through touch or visualization.</p>     
+      
+            </div>
+ 
+            <div class="card">
+            
+             <img src="https://cdn-aapmh.nitrocdn.com/hiZVBWbhUadctEPSjBBACbOiLOxQyZWV/assets/images/optimized/rev-84751ad/www.baseformula.com/image/catalog/blog-images-new/Self-Healing.jpg" alt="" >
+            <h2>
+                Access Bar
+            </h2>
+           <p>Yoga technique focusing on energy points for relaxation and clarity.</p>     
+      
+            </div>
+ 
+                 
+            <div class="card">
+            
+             <img src="https://images.pond5.com/people-training-laughter-therapy-and-footage-058310616_iconl.jpeg" alt="" >
+            <h2>
+                Laughter Therapy
+            </h2>
+           <p>Healing through intentional laughter to promote joy and well-being in yoga.</p>     
+      
+            </div>
+ 
+            <div class="card">
+            
+             <img src="https://www.artnyfair.com/wp-content/uploads/2021/08/best-markers-for-coloring-mandalas.jpg" alt="" >
+            <h2 >
+                Art And Mandala Therapy
+            </h2>
+           <p>Expressive creation and sacred geometry in yoga meditation.</p>     
+      
+            </div>
+ 
+                 
+            <div class="card">
+            
+             <img src="https://img.freepik.com/premium-photo/girl-practicing-yoga-rock_1286-3787.jpg" alt="" >
+            <h2>
+                past Regression
+            </h2>
+           <p>Exploring past lives through meditation for self-discovery <br>in yoga.</p>     
+      
+            </div>
+ 
+                      
+ 
+     </div>
+ </div>
+ 
+
+
+
+<!-- 3rd page css -->
+
+
+
+<h1 class="y3">WHATS YOUR WELL-BEING GOAL</h1>
+
+
+<div id="card-area">
+    <div class="wrapper">
+        <div class="box-area">
+            <div class="box">
+                <img alt="" src="https://img.etimg.com/thumb/width-640,height-480,imgsize-29206,resizemode-75,msid-97315316/magazines/panache/not-just-mind-body-experts-say-yoga-can-prevent-and-help-manage-chronic-diseases/yoga-woman-stretch_istock.jpg">
+                <div class="overlay">
+                    <h3>PHYSICAL WELL-BEING <br>
+                        HEALTH
+                        </h3>
+                </div>
+            </div>
+            <div class="box">
+                <img alt="" src="https://img.etimg.com/thumb/msid-92353369,width-640,height-480,imgsize-102042,resizemode-4/yoga-poses-to-relieve-stress.jpg">
+                <div class="overlay">
+                    <h3>EMOTIONAL WELL-BEING
+                        RELATIONSHIPS SELF LOVE
+                        
+                        
+
+
+                       </h3>
+                </div>
+            </div>
+            <div class="box">
+                <img alt="" src="https://img.etimg.com/thumb/width-640,height-480,imgsize-2570667,resizemode-75,msid-101150781/news/how-to/how-to-lose-weight-with-yoga-here-are-six-transformative-yoga-asanas-to-help-you-lose-weight-faster/bridge-pose-setu-bandhasana.jpg">
+                <div class="overlay">
+                    <h3>MENTAL WELL-BEINGG
+                        DEPRESSION
+                        ANXIETY
+                        MOOD SWINGS
+                        </h3>
+                </div>
+            </div>
+            <div class="box">
+                <img alt="" src="https://img.etimg.com/thumb/msid-92351947,width-640,height-480,imgsize-1274245,resizemode-4/reboot-and-recharge-with-yoga.jpg">
+                <div class="overlay">
+                    <h3>SPRITUAL WELLBEING
+                        LIFE PURPOSE
+                        KARMIC CONNECTION
+                        </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+
+
+<!-- 4th page -->
+
+
+
+
+<h1 class="y2">CHECK YOUR SPRITUAL GOAL</h1>
+    
+<div class="container2">
+    <div class="content-section2">
+        <div class="card1">
+           
+         <img src="https://i0.wp.com/trackyoga.app/wp-content/uploads/2023/11/Yoga-Practice-With-Spiritual-Poems.jpg?fit=800%2C521&ssl=1" alt="" >
+        <h2>
+          Free Self Assesment Test Your Spiritual Quatient
+        </h2>
+        
+  
+        </div>
+
+        <div class="card1">
+           
+            <img src="https://qph.cf2.quoracdn.net/main-qimg-1324561d120638b3b5c793bddc1b5e0c-lq" alt="">
+           <h2>
+              Spiritual Group Join Community
+           </h2>
+         
+     
+           </div>
+
+           <div class="card1">
+           
+            <img src="https://skinnyms.com/wp-content/uploads/2015/08/Top-5-Life-Changing-Yoga-Routines-1-600x400.jpg" alt="" >
+           <h2>
+           Spritual Courses 
+           Sign Up To Spritual Path
+           </h2>
+         
+     
+           </div>
+
+           <div class="card1">
+           
+            <img src="https://img.freepik.com/free-photo/young-attractive-woman-dandasana-pose-white-loft-studio_1163-4060.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1698969600&semt=ais" alt="" >
+           <h2>
+               Join Study Circle <br>Sign Up
+           </h2>
+           
+     
+           </div>
+
+           <div class="card1">
+           
+            <img src="https://i0.wp.com/www.yogabasics.com/yogabasics2017/wp-content/uploads/2023/06/fitness-yoga-class-stretching-exercise-with-women-together-health-wellness-instructor-diversity-group-pilates-studio-holistic-workout-mental-health-balance-zen-mind-copy-jpg.webp?fit=1080729&ssl=1" alt="" >
+           <h2>
+          Search Alternatives <br>Healing Center
+           </h2>
+              
+     
+           </div>
+
+           
+           <div class="card1">
+           
+            <img src="https://images.ctfassets.net/cnu0m8re1exe/3qzr3eoWDYXq9tHmnr3QzK/dade797f13615399d1be31d5d68246a6/shutterstock_1660411888.jpg?fm=jpg&fl=progressive&w=660&h=433&fit=fill" alt="" >
+           <h2>
+              Explore Spritual Destination
+           </h2>
+           
+     
+           </div>
+
+                
+           <div class="card1">
+           
+            <img src="https://media.yourobserver.com/img/photos/2023/03/15/AdobeStock_305593240_t1100.jpeg?31a214c4405663fd4bc7e33e8c8cedcc07d61559" alt="" >
+           <h2>
+           Watch Live
+           </h2>
+          
+     
+           </div>
+
+                
+           <div class="card1">
+           
+            <img src="https://assets-global.website-files.com/62b47b75c134bb4db23ae1df/651d840cfc151bc11136265c_Yoga%20MAIN.jpg" alt="" >
+           <h2>
+            Explore Spritual
+           </h2>
+              
+     
+           </div>
+
+           
+
+    </div>
+</div>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+    <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+            <li><a href="#">Aboout purpul</a></li>
+            <li><a href="#">Corporate <br>partnership</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Expert T&C</a></li>
+            <li><a href="#">Refund Policy</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Experts</h4>
+        <ul>
+            <li><a href="#">Healing Experts</a></li>
+            <li><a href="#">Emotional Health Experts</a></li>
+            <li><a href="#">Mental Health Experts</a></li>
+            <li><a href="#">Spiritual Coach</a></li>
+            <li><a href="#">Life Coach</a></li>
+            <li><a href="#">Happiness Coach</a></li>
+            <li><a href="#">Explore Healers</a></li>
+            <li><a href="#">Join as an Expert</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+            <li><a href="#">Video content</a></li>
+            <li><a href="#">Spritual Audio Series</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">Artricles</a></li>
+            <li><a href="#">Research</a></li>
+            <li><a href="#">Quizes</a></li>
+            <li><a href="#">Live Feed</a></li>
+            <li><a href="#">Map</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+            <li><a href="#">Directory</a></li>
+            <li><a href="#">Mental Health Resources</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">F&Q</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-col">
+        <h4>Community</h4>
+        <ul>
+            <li><a href="#">Community Tab</a></li>
+            <li><a href="#">Feeds</a></li>
+            <li><a href="#">Guidelines</a></li>
+            <li><a href="#">Anonymity</a></li>
+            <li><a href="#">Tags</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-col">
+        <h4>Offering</h4>
+        <ul>
+            <li><a href="#">Book Sessions</a></li>
+            <li><a href="#">Learn Meditation</a></li>
+            <li><a href="#">Join Courses</a></li>
+            <li><a href="#">Spritual Book Study</a></li>
+            <li><a href="#">Gift Healing</a></li>
+            <li><a href="#">Corporates Bookings</a></li>
+            <li><a href="#">Join Retreats</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-col">
+        <h4>Get The App</h4>
+        <ul>
+            <li><a href="#">Download App</a></li>
+            <li><a href="#">Apple</a></li>
+            <li><a href="#">Android</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-col">
+        <h4>Join Purpul</h4>
+        <ul>
+            <li><a href="#">Sign-up</a></li>
+            <li><a href="#">Sign up-Trials</a></li>
+            <li><a href="#">Subscription</a></li>
+        </ul>
+    </div>
+   
+</footer>
+
+
+
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+
+
+    <script>
+      //Javascript for Navigation effect on scroll
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle('sticky', window.scrollY > 0);
+      });
+
+      //Javascript for responsive navigation sidebar Nav
+      var menu = document.querySelector('.menu');
+      var menuBtn = document.querySelector('.menu-btn');
+      var closeBtn = document.querySelector('.close-btn');
+
+      menuBtn.addEventListener("click", () => {
+        menu.classList.add('active');
+      });
+
+      closeBtn.addEventListener("click", () => {
+        menu.classList.remove('active');
+      });
+
+
+// ANIMATIONS....
+
+const sr = ScrollReveal({
+            origin: 'top',
+            distance: '85px', 
+            duration: 2500,
+            reset: true
+        })
+
+        sr.reveal ('.yogaimg',{delay:300});
+        sr.reveal ('.text',{delay:400});
+
+        // 2nd page animation...
+
+        sr.reveal ('.y1',{delay:300});
+        sr.reveal ('.card',{delay:400});
+
+        // 3rd page Animation
+
+        sr.reveal ('.y3',{delay:300});
+        sr.reveal ('.wrapper',{delay:400});
+
+          // 4th page Animation...
+
+          sr.reveal ('.y2',{delay:300});
+        sr.reveal ('.card1',{delay:400});
+
+
+
+
+        
+   
+
+    </script>
+
+</body>
+
+</html>
